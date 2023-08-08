@@ -13,7 +13,7 @@ public class LT115 {
 
     if(dp[i][j]!=-1) return dp[i][j];
 
-    if(s.charAt(i)==s.charAt(j)){
+    if(s.charAt(i)==t.charAt(j)){
       int taken=memo(i-1, j-1, s, t, dp);
       int notTaken=memo(i-1, j, s, t, dp);
       return dp[i][j]=(taken+notTaken)%prime;
